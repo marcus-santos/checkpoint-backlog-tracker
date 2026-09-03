@@ -1,0 +1,32 @@
+# Dependências e Builds globais
+node_modules/
+dist/
+build/
+.turbo/
+
+# Arquivos do Next.js e frameworks
+.next/
+out/
+
+# Arquivos locais da Cloudflare (Wrangler)
+.wrangler/
+
+# Arquivos de configuração do sistema e editores
+.DS_Store
+.vscode/
+.idea/
+
+# Arquivos de ambiente/segredos (MUITO IMPORTANTE)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
