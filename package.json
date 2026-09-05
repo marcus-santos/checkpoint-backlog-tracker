@@ -12,9 +12,9 @@
   ],
   "scripts": {
     "dev": "npm run dev --workspaces",
-    "lint": "npx biome lint .",
-    "format": "npx biome format --write .",
-    "check": "npx biome check --write ."
+    "lint": "npm run lint --workspace web",
+    "format": "npm run format --workspace web",
+    "check": "npm run lint --workspace web -- --write"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.1"

@@ -1,61 +1,61 @@
-import { Progress } from "@/components/ui/progress";
-import { Medal, Target } from "lucide-react";
+import { Medal, Target } from 'lucide-react'
+import { Progress } from '@/components/ui/progress'
 
 export type DailyMission = {
-  id: string;
-  label: string;
-  current: number;
-  target: number;
-  unit: string;
-};
+  id: string
+  label: string
+  current: number
+  target: number
+  unit: string
+}
 
 export type RecentAchievement = {
-  id: string;
-  text: string;
-  time: string;
-};
+  id: string
+  text: string
+  time: string
+}
 
 export const mockDailyMissions: DailyMission[] = [
   {
-    id: "play-session",
-    label: "Complete a play session",
+    id: 'play-session',
+    label: 'Complete a play session',
     current: 2,
     target: 3,
-    unit: " sessions",
+    unit: ' sessions',
   },
   {
-    id: "earn-trophies",
-    label: "Earn trophies",
+    id: 'earn-trophies',
+    label: 'Earn trophies',
     current: 7,
     target: 10,
-    unit: " trophies",
+    unit: ' trophies',
   },
   {
-    id: "finish-chapter",
-    label: "Finish a game chapter",
+    id: 'finish-chapter',
+    label: 'Finish a game chapter',
     current: 1,
     target: 1,
-    unit: " chapter",
+    unit: ' chapter',
   },
-];
+]
 
 export const mockRecentAchievements: RecentAchievement[] = [
   {
-    id: "first-blood",
-    text: "First Blood unlocked in Resident Evil Requiem",
-    time: "2 hours ago",
+    id: 'first-blood',
+    text: 'First Blood unlocked in Resident Evil Requiem',
+    time: '2 hours ago',
   },
   {
-    id: "combo-master",
-    text: "Combo Master unlocked in Sifu",
-    time: "Yesterday",
+    id: 'combo-master',
+    text: 'Combo Master unlocked in Sifu',
+    time: 'Yesterday',
   },
-];
+]
 
 type DailyMissionsCardProps = {
-  missions?: DailyMission[];
-  achievements?: RecentAchievement[];
-};
+  missions?: DailyMission[]
+  achievements?: RecentAchievement[]
+}
 
 export function DailyMissionsCard({
   missions = mockDailyMissions,
@@ -73,8 +73,8 @@ export function DailyMissionsCard({
           {missions.map((mission) => {
             const percentage = Math.min(
               100,
-              Math.round((mission.current / mission.target) * 100),
-            );
+              Math.round((mission.current / mission.target) * 100)
+            )
 
             return (
               <div key={mission.id} className="space-y-1.5">
@@ -83,12 +83,14 @@ export function DailyMissionsCard({
                     {mission.label}
                   </span>
                   <span className="shrink-0 font-mono text-[11px] text-primary">
-                    {mission.current}{mission.unit} / {mission.target}{mission.unit}
+                    {mission.current}
+                    {mission.unit} / {mission.target}
+                    {mission.unit}
                   </span>
                 </div>
                 <Progress value={percentage} className="h-1.5" />
               </div>
-            );
+            )
           })}
         </div>
 
@@ -118,5 +120,5 @@ export function DailyMissionsCard({
         </div>
       </div>
     </section>
-  );
+  )
 }
