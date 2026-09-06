@@ -7,14 +7,14 @@ import { Button } from './ui/button'
 
 const navLinks = [
   { label: 'Dashboard', href: '/dashboard' },
-  { label: 'My Library', href: '/my-library' },
+  { label: 'My Backlog', href: '/my-backlog' },
+  { label: 'Discovery', href: '/discovery' },
   { label: 'Community', href: '/community' },
-  { label: 'Game Catalog', href: '/game-catalog' },
 ]
 
 export function PrivateHeader() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/60 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur-sm">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2.5">
           <CheckpointLogo size="text-xl" />
@@ -32,13 +32,13 @@ export function PrivateHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Button className="items-center justify-center rounded-xl py-2 px-3 bg-card text-muted-foreground text-sm hover:text-foreground hover:bg-primary/70 transition cursor-pointer">
+          <Button className="items-center justify-center rounded-xl py-2 px-3 bg-card text-muted-foreground text-sm hover:text-foreground hover:bg-primary/70 transition-colors cursor-pointer">
             <IoSearch />
           </Button>
-          <Button className="items-center justify-center rounded-xl py-2 px-3 bg-card text-muted-foreground text-sm hover:text-foreground hover:bg-primary/70 transition cursor-pointer">
+          <Button className="items-center justify-center rounded-xl py-2 px-3 bg-card text-muted-foreground text-sm hover:text-foreground hover:bg-primary/70 transition-colors cursor-pointer">
             <BiBell />
           </Button>
-          <Button className="items-center justify-center rounded-full size-9 border-primary/80 border-2 bg-card text-muted-foreground text-sm hover:bg-background hover:scale-105 transition cursor-pointer">
+          <Button className="items-center justify-center rounded-full size-9 border-primary/80 border-2 bg-card text-muted-foreground text-sm hover:bg-background hover:scale-105 transition-[background-color,transform] cursor-pointer">
             <Image
               src="/profile.jpg"
               alt="profile picture"

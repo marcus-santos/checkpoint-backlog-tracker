@@ -1,16 +1,16 @@
 'use client'
 
-import { CurrentlyPlayingCard } from '@/features/my-library/components/currently-playing-card'
+import { CurrentlyPlayingCard } from '@/features/my-backlog/components/currently-playing-card'
 import {
     GameRow,
     type GameStatus,
     type LibraryGame,
-} from '@/features/my-library/components/game-row'
+} from '@/features/my-backlog/components/game-row'
 import {
     type GameList,
     MyListsCard,
-} from '@/features/my-library/components/my-lists-card'
-import SearchBar from '@/features/my-library/components/search-bar'
+} from '@/features/my-backlog/components/my-lists-card'
+import SearchBar from '@/features/my-backlog/components/search-bar'
 import { useMemo, useState } from 'react'
 
 const initialGames: LibraryGame[] = [
