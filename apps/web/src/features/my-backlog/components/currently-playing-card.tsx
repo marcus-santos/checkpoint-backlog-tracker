@@ -1,13 +1,13 @@
 'use client'
 
 import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
 } from '@/components/ui/select'
-import type { GameStatus } from '@/features/my-library/components/game-row'
+import type { GameStatus } from '@/features/my-backlog/components/game-row'
 import Image from 'next/image'
 
 export type CurrentlyPlayingGame = {
